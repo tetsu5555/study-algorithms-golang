@@ -1,12 +1,10 @@
-package main
+package bubble
 
 import (
 	"fmt"
-
-	"./insertion"
 )
 
-var toBeSorted [10]int = [10]int{1, 3, 2, 4, 8, 6, 7, 2, 3, 0}
+var ToBeSorted [10]int = [10]int{1, 3, 2, 4, 8, 6, 7, 2, 3, 0}
 
 func BubbleSort(input [10]int) [10]int {
 	// listの中の要素の数
@@ -31,16 +29,4 @@ func BubbleSort(input [10]int) [10]int {
 	// ソートされたリストをprintする
 	fmt.Println(input)
 	return input
-}
-
-func main() {
-	fmt.Println("Bubble sort started")
-	BubbleSort(toBeSorted)
-	fmt.Println("Bubble sort end")
-
-	fmt.Println("Insertion sort started")
-	slice := insertion.GenerateSlice(20)
-	sorted := insertion.InsertionSort(slice)
-	fmt.Println(sorted)
-	fmt.Println("Insertion sort end")
 }
