@@ -6,7 +6,7 @@ import (
 
 var toBeSorted [10]int = [10]int{1, 3, 2, 4, 8, 6, 7, 2, 3, 0}
 
-func bubbleSort(input [10]int) {
+func BubbleSort(input [10]int) [10]int {
 	// listの中の要素の数
 	n := 10
 	// swappedにtrueをセット
@@ -28,9 +28,10 @@ func bubbleSort(input [10]int) {
 	}
 	// ソートされたリストをprintする
 	fmt.Println(input)
+	return input
 }
 
 func main() {
 	fmt.Println("Hello World")
-	bubbleSort(toBeSorted)
+	BubbleSort(toBeSorted)
 }
