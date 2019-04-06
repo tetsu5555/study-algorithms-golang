@@ -5,6 +5,7 @@ import (
 
 	"./bubble"
 	"./insertion"
+	"./merge"
 )
 
 func main() {
@@ -13,8 +14,13 @@ func main() {
 	fmt.Println("Bubble sort end")
 
 	fmt.Println("Insertion sort started")
-	slice := insertion.GenerateSlice(20)
+	slice1 := insertion.GenerateSlice(20)
 	sorted := insertion.InsertionSort(slice)
 	fmt.Println(sorted)
 	fmt.Println("Insertion sort end")
+
+	slice2 := merge.GenerateSlice(20)
+	fmt.Println("\n-- Unsorted --- \n\n", slice)
+	fmt.Println("\n-- Sorted --- \n\n", merge.MergeSort(slice))
+
 }
