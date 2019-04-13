@@ -6,6 +6,7 @@ import (
 	"./bubble"
 	"./insertion"
 	"./merge"
+	"./quick"
 )
 
 func main() {
@@ -23,4 +24,8 @@ func main() {
 	fmt.Println("\n-- Unsorted --- \n\n", slice2)
 	fmt.Println("\n-- Sorted --- \n\n", merge.MergeSort(slice2))
 
+	slice3 := merge.GenerateSlice(20)
+	// ソートして結果を出力する
+	fmt.Println("\n-- Unsorted --- \n\n", slice3)
+	fmt.Println("\n-- Sorted --- \n\n", quick.QuickSort(slice3))
 }
